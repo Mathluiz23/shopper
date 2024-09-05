@@ -1,12 +1,27 @@
 import express from 'express';
 import routes from './routes';
+import dotenv from 'dotenv';
+import sequelize from './database/database';
+
+dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
-
 app.use(express.json());
-app.use('/api', routes);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.use('/', routes);
+
+const PORT = process.env.PORT || 3000;
+
+sequelize.sync().then(() => {
+  console.log('Tabelas sincronizadas com o banco de dados.');
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}).catch((err) => {
+  console.error('Erro ao sincronizar com o banco de dados:', err);
 });
+
+
+
+
+
