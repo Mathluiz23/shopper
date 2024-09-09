@@ -115,3 +115,25 @@ Devido a limitações de quota durante o desenvolvimento, foi implementado um mo
 Documentação técnica do Google Gemini (LLM): 🔐 🔑
  - https://ai.google.dev/gemini-api/docs/api-key
  - https://ai.google.dev/gemini-api/docs/vision
+
+
+## Enviando imagem para leitura de medição 
+ <div align="center">
+    <img alt="" src="./images/post.png"/>
+</div>
+
+## Confirmar leitura da medição realizada 
+ <div align="center">
+    <img alt="" src="./images/patch_value.png"/>
+</div>
+
+## Listar todas as leituras e clientes
+ <div align="center">
+    <img alt="" src="./images/get_customers.png"/>
+</div>
+
+## Listar as leituras de um cliente específico
+ <div align="center">
+    <img alt="" src="./images/get_customer.png"/>
+</div>
+
